@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tajniacy.controllers.MainGameController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Button fx:id="button1row1col" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton1row1col" text="Button" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <font>
+                <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+            </font>
+        </Button>
+      <Button fx:id="button3row5col" alignment="CENTER" layoutX="6.0" layoutY="86.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton3row5col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button3row4col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton3row4col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button3row3col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton3row3col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button3row2col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton3row2col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button3row1col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton3row1col" text="Button" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button2row5col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton2row5col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button2row4col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton2row4col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button2row3col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton2row3col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button2row2col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton2row2col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button2row1col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton2row1col" text="Button" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button1row5col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton1row5col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button1row4col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton1row4col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button1row3col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton1row3col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button1row2col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton1row2col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button5row4col" alignment="CENTER" layoutX="130.0" layoutY="86.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton5row4col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button5row3col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton5row3col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button5row2col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton5row2col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button5row1col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton5row1col" text="Button" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button4row5col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton4row5col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button4row4col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton4row4col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button4row3col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton4row3col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button4row2col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton4row2col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button4row1col" alignment="CENTER" layoutX="10.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton4row1col" text="Button" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="button5row5col" alignment="CENTER" layoutX="10.0" layoutY="287.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickButton5row5col" text="Button" textAlignment="JUSTIFY" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+         <font>
+            <Font name="DejaVu Sans Mono Bold Oblique" size="26.0" />
+         </font>
+      </Button>
+      <Label fx:id="redLabelId" text="RED" textFill="#b91010">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="blueLabelId" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="22.0" text="BLUE" textFill="#1120b8" GridPane.columnIndex="4">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="blueLabelIdCounter" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="516.0" layoutY="22.0" text="0" textFill="#1120b8" GridPane.columnIndex="3">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="redLabelIdCounter" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="22.0" text="0" textFill="#b91010" GridPane.columnIndex="1">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+
+
+    </children>
+</GridPane>
