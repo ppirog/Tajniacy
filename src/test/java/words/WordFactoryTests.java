@@ -25,6 +25,7 @@ public class WordFactoryTests {
 
     @Test
     public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGivesUnique25WordsTest() {
+
         //given
         WordFactory.setLanguageStrategy(new PolishLanguageStrategy());
         List<Word> allWords = WordFactory.get25WordsWith9RedColors8Blue1Black7yellow();
