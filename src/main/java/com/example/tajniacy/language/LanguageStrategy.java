@@ -1,7 +1,5 @@
 package com.example.tajniacy.language;
 
-import java.lang.ref.PhantomReference;
-
 public class LanguageStrategy {
     protected String pathToFileWithWords;
     protected String redTeamInfo;
