@@ -8,93 +8,89 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class WordFactoryTests {
 
     @Test
-    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives25WordsTest(){
+    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives25WordsTest() {
         //given
         WordFactory.setLanguageStrategy(new PolishLanguageStrategy());
         List<Word> allWords = WordFactory.get25WordsWith9RedColors8Blue1Black7yellow();
         //when
         int expectedSize = 25;
         //then
-        Assert.assertEquals(allWords.size(),expectedSize);
+        Assert.assertEquals(allWords.size(), expectedSize);
     }
+
     @Test
-    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGivesUnique25WordsTest(){
+    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGivesUnique25WordsTest() {
         //given
         WordFactory.setLanguageStrategy(new PolishLanguageStrategy());
         List<Word> allWords = WordFactory.get25WordsWith9RedColors8Blue1Black7yellow();
-        int counteruniqueWords = allWords
-                .stream()
-                .distinct()
-                .collect(Collectors.toList())
-                .size();
+        int counteruniqueWords = (int) allWords.stream().distinct().count();
         //when
         int expectedUniqueWords = 25;
         //then
-        Assert.assertEquals(expectedUniqueWords,counteruniqueWords);
+        Assert.assertEquals(expectedUniqueWords, counteruniqueWords);
     }
+
     @Test
-    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives9WordsWithRedColorTest(){
+    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives9WordsWithRedColorTest() {
         //given
         WordFactory.setLanguageStrategy(new PolishLanguageStrategy());
         List<Word> allWords = WordFactory.get25WordsWith9RedColors8Blue1Black7yellow();
-        int counterWordsWithRedColor = allWords
-                .stream()
-                .filter(word -> word.getColor().equals(ColorSelector.RED))
-                .collect(Collectors.toList())
-                .size();
+        int counterWordsWithRedColor = (int) allWords.stream()
+                .filter(word -> word.getColor()
+                        .equals(ColorSelector.RED))
+                .count();
         //when
         int expectedWordsWithRedColorCounter = 9;
         //then
-        Assert.assertEquals(counterWordsWithRedColor,counterWordsWithRedColor);
+        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithRedColorCounter);
     }
+
     @Test
-    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives8WordsWithBlueColorTest(){
+    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives8WordsWithBlueColorTest() {
         //given
         WordFactory.setLanguageStrategy(new PolishLanguageStrategy());
         List<Word> allWords = WordFactory.get25WordsWith9RedColors8Blue1Black7yellow();
-        int counterWordsWithRedColor = allWords
-                .stream()
-                .filter(word -> word.getColor().equals(ColorSelector.BLUE))
-                .collect(Collectors.toList())
-                .size();
+        int counterWordsWithRedColor = (int) allWords.stream()
+                .filter(word -> word.getColor()
+                        .equals(ColorSelector.BLUE))
+                .count();
         //when
         int expectedWordsWithRedColorCounter = 8;
         //then
-        Assert.assertEquals(counterWordsWithRedColor,counterWordsWithRedColor);
+        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithRedColorCounter);
     }
+
     @Test
-    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives1WordWithBlackColorTest(){
+    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives1WordWithBlackColorTest() {
         //given
         WordFactory.setLanguageStrategy(new PolishLanguageStrategy());
         List<Word> allWords = WordFactory.get25WordsWith9RedColors8Blue1Black7yellow();
-        int counterWordsWithRedColor = allWords
-                .stream()
-                .filter(word -> word.getColor().equals(ColorSelector.BLACK))
-                .collect(Collectors.toList())
-                .size();
+        int counterWordsWithRedColor = (int) allWords.stream()
+                .filter(word -> word.getColor()
+                        .equals(ColorSelector.BLACK))
+                .count();
         //when
         int expectedWordsWithRedColorCounter = 1;
         //then
-        Assert.assertEquals(counterWordsWithRedColor,counterWordsWithRedColor);
+        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithRedColorCounter);
     }
+
     @Test
-    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives7WordWithYellowColorTest(){
+    public void isMethodGet25WordsWith9RedColors8Blue1Black7yellowGives7WordWithYellowColorTest() {
         //given
         WordFactory.setLanguageStrategy(new PolishLanguageStrategy());
         List<Word> allWords = WordFactory.get25WordsWith9RedColors8Blue1Black7yellow();
-        int counterWordsWithRedColor = allWords
-                .stream()
-                .filter(word -> word.getColor().equals(ColorSelector.YELLOW))
-                .collect(Collectors.toList())
-                .size();
+        int counterWordsWithRedColor = (int) allWords.stream()
+                .filter(word -> word.getColor()
+                        .equals(ColorSelector.YELLOW))
+                .count();
         //when
         int expectedWordsWithRedColorCounter = 7;
         //then
-        Assert.assertEquals(counterWordsWithRedColor,counterWordsWithRedColor);
+        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithRedColorCounter);
     }
 }
