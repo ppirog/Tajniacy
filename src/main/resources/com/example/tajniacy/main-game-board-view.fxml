@@ -8,7 +8,7 @@
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
         <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
         <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
     </columnConstraints>
@@ -161,6 +161,11 @@
          </font>
       </Label>
       <Label fx:id="redLabelIdCounter" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="22.0" text="0" textFill="#b91010" GridPane.columnIndex="1">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="generalInformationLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="130.0" layoutY="22.0" text="0" textFill="#b91010" GridPane.columnIndex="2">
          <font>
             <Font size="36.0" />
          </font>

@@ -15,7 +15,7 @@ public class WordFactory {
 
     private static LanguageStrategy languageStrategy;
 
-    public static List<Word> get25WordsWith8RedColors7Blue1Black9Yellow() {
+    public static List<Word> get25WordsWith9RedColors8Blue1Black7yellow() {
         int maxNumber = 25;
         List<String> slowa = get25Words();
         List<Word> words = new ArrayList<>();
@@ -75,7 +75,7 @@ public class WordFactory {
 
     private static List<String> getAllWordFromFile() {
         try {
-            return Files.readAllLines(Paths.get(languageStrategy.getPathToFileWithPolishWords()), StandardCharsets.UTF_8);
+            return Files.readAllLines(Paths.get(languageStrategy.getPathToFileWithWords()), StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

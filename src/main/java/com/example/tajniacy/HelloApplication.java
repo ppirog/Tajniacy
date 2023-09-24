@@ -2,9 +2,9 @@ package com.example.tajniacy;
 
 import com.example.tajniacy.controllers.DialogController;
 import com.example.tajniacy.controllers.MainGameController;
-import com.example.tajniacy.language.EnglishLanguageLanguageStrategy;
+import com.example.tajniacy.language.EnglishLanguageStrategy;
 import com.example.tajniacy.language.LanguageStrategy;
-import com.example.tajniacy.language.PolishLanguageLanguageStrategy;
+import com.example.tajniacy.language.PolishLanguageStrategy;
 import com.example.tajniacy.words.WordFactory;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -56,9 +56,9 @@ public class HelloApplication extends Application {
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.isPresent() && result.get() == buttonTypeOK) {
-            setStrategyEverywhere(new PolishLanguageLanguageStrategy());
+            setStrategyEverywhere(new PolishLanguageStrategy());
         } else {
-            setStrategyEverywhere(new EnglishLanguageLanguageStrategy());
+            setStrategyEverywhere(new EnglishLanguageStrategy());
         }
     }
 

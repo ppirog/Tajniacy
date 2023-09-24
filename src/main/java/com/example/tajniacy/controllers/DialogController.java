@@ -1,8 +1,6 @@
 package com.example.tajniacy.controllers;
 
-import com.example.tajniacy.language.EnglishLanguageLanguageStrategy;
 import com.example.tajniacy.language.LanguageStrategy;
-import com.example.tajniacy.language.PolishLanguageLanguageStrategy;
 import com.example.tajniacy.words.WordStorage;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,6 +10,9 @@ import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static com.example.tajniacy.language.FilePathsManager.ENGLISH_WORDS_FILE_PATH;
+import static com.example.tajniacy.language.FilePathsManager.POLISH_WORDS_FILE_PATH;
 
 public class DialogController implements Initializable {
 
@@ -76,6 +77,19 @@ public class DialogController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        setBoard();
+        setAllLabels();
+    }
+
+    private void setAllLabels() {
+        if (languageStrategy.getPathToFileWithWords().equals(POLISH_WORDS_FILE_PATH)) {
+            instructionLabel.setText("TO OKNO NIE WYŚWIETLI SIĘ PONOWNIE. ZAPISZ PLANSZE (np. zrób zdjęcie)\nGdy zapiszesz plansze zamknij okno.");
+        } else if (languageStrategy.getPathToFileWithWords().equals(ENGLISH_WORDS_FILE_PATH)) {
+            instructionLabel.setText("THIS WINDOW WON'T SHOW UP AGAIN. SAVE IT (ex. take a photo)!\nWhen you save board close window.");
+        }
+    }
+
+    private void setBoard() {
         rectange1row1col.setFill(Paint.valueOf(wordStorage.getWordList().get(0).getColor().getColorCode()));
         rectange1row2col.setFill(Paint.valueOf(wordStorage.getWordList().get(1).getColor().getColorCode()));
         rectange1row3col.setFill(Paint.valueOf(wordStorage.getWordList().get(2).getColor().getColorCode()));
@@ -105,11 +119,5 @@ public class DialogController implements Initializable {
         rectange5row3col.setFill(Paint.valueOf(wordStorage.getWordList().get(22).getColor().getColorCode()));
         rectange5row4col.setFill(Paint.valueOf(wordStorage.getWordList().get(23).getColor().getColorCode()));
         rectange5row5col.setFill(Paint.valueOf(wordStorage.getWordList().get(24).getColor().getColorCode()));
-
-        if (languageStrategy.getPathToFileWithPolishWords().equals(new PolishLanguageLanguageStrategy().getPathToFileWithPolishWords())) {
-            instructionLabel.setText("TO OKNO NIE WYŚWIETLI SIĘ PONOWNIE. ZAPISZ PLANSZE (np. zrób zdjęcie)\nGdy zapiszesz plansze zamknij okno.");
-        } else if (languageStrategy.getPathToFileWithPolishWords().equals(new EnglishLanguageLanguageStrategy().getPathToFileWithPolishWords())) {
-            instructionLabel.setText("THIS WINDOW WON'T SHOW UP AGAIN. SAVE IT (ex. take a photo)!\nWhen you save board close window.");
-        }
     }
 }

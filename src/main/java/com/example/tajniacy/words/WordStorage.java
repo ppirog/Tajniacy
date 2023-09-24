@@ -14,7 +14,7 @@ public class WordStorage {
         if (instance == null) {
             synchronized (WordStorage.class) {
                 instance = new WordStorage();
-                instance.wordList = WordFactory.get25WordsWith8RedColors7Blue1Black9Yellow();
+                instance.wordList = WordFactory.get25WordsWith9RedColors8Blue1Black7yellow();
             }
         }
         return instance;
