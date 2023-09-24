@@ -59,9 +59,9 @@ public class WordFactoryTests {
                         .equals(ColorSelector.BLUE))
                 .count();
         //when
-        int expectedWordsWithRedColorCounter = 8;
+        int expectedWordsWithBlueColorCounter = 8;
         //then
-        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithRedColorCounter);
+        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithBlueColorCounter);
     }
 
     @Test
@@ -74,9 +74,9 @@ public class WordFactoryTests {
                         .equals(ColorSelector.BLACK))
                 .count();
         //when
-        int expectedWordsWithRedColorCounter = 1;
+        int expectedWordsWithBlackColorCounter = 1;
         //then
-        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithRedColorCounter);
+        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithBlackColorCounter);
     }
 
     @Test
@@ -89,8 +89,8 @@ public class WordFactoryTests {
                         .equals(ColorSelector.YELLOW))
                 .count();
         //when
-        int expectedWordsWithRedColorCounter = 7;
+        int expectedWordsWithYellowColorCounter = 7;
         //then
-        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithRedColorCounter);
+        Assert.assertEquals(counterWordsWithRedColor, expectedWordsWithYellowColorCounter);
     }
 }
