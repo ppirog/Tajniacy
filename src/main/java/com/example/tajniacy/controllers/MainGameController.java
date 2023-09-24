@@ -14,11 +14,9 @@ import javafx.scene.paint.Color;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static com.example.tajniacy.language.FilePathsManager.ENGLISH_WORDS_FILE_PATH;
-import static com.example.tajniacy.language.FilePathsManager.POLISH_WORDS_FILE_PATH;
-
 public class MainGameController implements Initializable {
 
+    private static final String COLOR_FORMAT = "-fx-background-color: %s;";
     private static LanguageStrategy languageStrategy;
     private final WordStorage wordStorage = WordStorage.getInstance();
     @FXML
@@ -151,13 +149,9 @@ public class MainGameController implements Initializable {
     }
 
     private void setAllLabels() {
-        if (languageStrategy.getPathToFileWithWords().equals(POLISH_WORDS_FILE_PATH)) {
-            redLabelId.setText("CZERWONI");
-            blueLabelId.setText("NIEBIESCY");
-        } else if (languageStrategy.getPathToFileWithWords().equals(ENGLISH_WORDS_FILE_PATH)) {
-            redLabelId.setText("RED");
-            blueLabelId.setText("BLUE");
-        }
+
+        redLabelId.setText(languageStrategy.getRedLabelText());
+        blueLabelId.setText(languageStrategy.getBlueLabelText());
         redLabelId.setTextFill(Color.web(ColorSelector.RED.getColorCode()));
         redLabelIdCounter.setTextFill(Color.web(ColorSelector.RED.getColorCode()));
         blueLabelId.setTextFill(Color.web(ColorSelector.BLUE.getColorCode()));
@@ -169,7 +163,7 @@ public class MainGameController implements Initializable {
     public void clickButton1row1col(MouseEvent mouseEvent) {
 
         ColorSelector colorSelector = wordStorage.getWordList().get(0).getColor();
-        button1row1col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button1row1col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button1row1colClicked) {
             updateCounter(colorSelector);
             button1row1colClicked = true;
@@ -181,7 +175,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton1row2col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(1).getColor();
-        button1row2col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button1row2col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button1row2colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -192,7 +186,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton1row3col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(2).getColor();
-        button1row3col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button1row3col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button1row3colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -203,7 +197,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton1row4col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(3).getColor();
-        button1row4col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button1row4col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button1row4colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -214,7 +208,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton1row5col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(4).getColor();
-        button1row5col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button1row5col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button1row5colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -225,7 +219,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton2row1col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(5).getColor();
-        button2row1col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button2row1col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button2row1colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -236,7 +230,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton2row2col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(6).getColor();
-        button2row2col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button2row2col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button2row2colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -247,7 +241,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton2row3col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(7).getColor();
-        button2row3col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button2row3col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button2row3colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -258,7 +252,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton2row4col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(8).getColor();
-        button2row4col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button2row4col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button2row4colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -269,7 +263,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton2row5col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(9).getColor();
-        button2row5col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button2row5col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button2row5colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -280,7 +274,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton3row1col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(10).getColor();
-        button3row1col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button3row1col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button3row1colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -291,7 +285,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton3row2col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(11).getColor();
-        button3row2col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button3row2col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button3row2colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -302,7 +296,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton3row3col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(12).getColor();
-        button3row3col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button3row3col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button3row3colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -313,7 +307,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton3row4col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(13).getColor();
-        button3row4col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button3row4col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button3row4colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -324,7 +318,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton3row5col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(14).getColor();
-        button3row5col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button3row5col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button3row5colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -335,7 +329,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton4row1col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(15).getColor();
-        button4row1col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button4row1col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button4row1colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -346,7 +340,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton4row2col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(16).getColor();
-        button4row2col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button4row2col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button4row2colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -357,7 +351,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton4row3col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(17).getColor();
-        button4row3col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button4row3col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button4row3colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -368,7 +362,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton4row4col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(18).getColor();
-        button4row4col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button4row4col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button4row4colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -379,7 +373,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton4row5col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(19).getColor();
-        button4row5col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button4row5col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button4row5colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -390,7 +384,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton5row1col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(20).getColor();
-        button5row1col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button5row1col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button5row1colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -401,7 +395,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton5row2col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(21).getColor();
-        button5row2col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button5row2col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button5row2colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -412,7 +406,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton5row3col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(22).getColor();
-        button5row3col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button5row3col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button5row3colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -423,7 +417,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton5row4col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(23).getColor();
-        button5row4col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button5row4col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button5row4colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);
@@ -434,7 +428,7 @@ public class MainGameController implements Initializable {
     @SuppressWarnings("unused")
     public void clickButton5row5col(MouseEvent mouseEvent) {
         ColorSelector colorSelector = wordStorage.getWordList().get(24).getColor();
-        button5row5col.setStyle(String.format("-fx-background-color: %s;", colorSelector.getColorCode()));
+        button5row5col.setStyle(String.format(COLOR_FORMAT, colorSelector.getColorCode()));
         if (!button5row5colClicked) {
             updateCounter(colorSelector);
             dislpayInfoMessage(colorSelector);

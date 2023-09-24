@@ -11,9 +11,6 @@ import javafx.scene.shape.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static com.example.tajniacy.language.FilePathsManager.ENGLISH_WORDS_FILE_PATH;
-import static com.example.tajniacy.language.FilePathsManager.POLISH_WORDS_FILE_PATH;
-
 public class DialogController implements Initializable {
 
     private static LanguageStrategy languageStrategy;
@@ -82,11 +79,7 @@ public class DialogController implements Initializable {
     }
 
     private void setAllLabels() {
-        if (languageStrategy.getPathToFileWithWords().equals(POLISH_WORDS_FILE_PATH)) {
-            instructionLabel.setText("TO OKNO NIE WYŚWIETLI SIĘ PONOWNIE. ZAPISZ PLANSZE (np. zrób zdjęcie)\nGdy zapiszesz plansze zamknij okno.");
-        } else if (languageStrategy.getPathToFileWithWords().equals(ENGLISH_WORDS_FILE_PATH)) {
-            instructionLabel.setText("THIS WINDOW WON'T SHOW UP AGAIN. SAVE IT (ex. take a photo)!\nWhen you save board close window.");
-        }
+        instructionLabel.setText(languageStrategy.getInstructionLabelText());
     }
 
     private void setBoard() {
