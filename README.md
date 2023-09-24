@@ -1,5 +1,6 @@
-![image](https://github.com/ppirog/Tajniacy/assets/126290295/1782ac5d-491e-4216-b236-5e60d4b4c975)# Tajniacy
+# Tajniacy
 My implementation of Tajniacy. 
+![image](https://github.com/ppirog/Tajniacy/assets/126290295/d5e97d0d-b2b1-4953-9d35-2026a9b41f53)
 
 Tajniacy Game is my favourite board game.
 Unfortunately this game consist of many elements and takes up a lot of space in backpack, which is not conveniant in use for example in trip or party.
