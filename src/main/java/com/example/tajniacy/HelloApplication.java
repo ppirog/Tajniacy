@@ -26,20 +26,8 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         showConfirmationAlertDialog();
-
-        FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("initial-game-board-view.fxml"));
-        Scene scene2 = new Scene(fxmlLoader2.load(), 670, 600);
-
-        Stage dialogStage = new Stage();
-        dialogStage.setScene(scene2);
-        dialogStage.setTitle("T A J N I A C Y!");
-        dialogStage.showAndWait();
-
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main-game-board-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
-        stage.setTitle("T A J N I A C Y!");
-        stage.setScene(scene);
-        stage.show();
+        showFirstBoardOnlyForCapitains();
+        showMainBoard(stage);
     }
 
     private void showConfirmationAlertDialog() {
@@ -59,6 +47,24 @@ public class HelloApplication extends Application {
         } else {
             setStrategyEverywhere(new EnglishLanguageStrategy());
         }
+    }
+
+    private void showFirstBoardOnlyForCapitains() throws IOException {
+        FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("initial-game-board-view.fxml"));
+        Scene scene2 = new Scene(fxmlLoader2.load(), 670, 600);
+
+        Stage dialogStage = new Stage();
+        dialogStage.setScene(scene2);
+        dialogStage.setTitle("T A J N I A C Y!");
+        dialogStage.showAndWait();
+    }
+
+    private void showMainBoard(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main-game-board-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
+        stage.setTitle("T A J N I A C Y!");
+        stage.setScene(scene);
+        stage.show();
     }
 
     private void setStrategyEverywhere(LanguageStrategy strategy) {
