@@ -26,7 +26,7 @@ public class WordsStrategyTests {
         WordStrategyFactory.setLanguageStrategy(new PolishLanguageStrategy());
         WordStrategy wordStrategy = WordStrategyFactory.getPreparedWordsToGame();
 
-        int givenSize = (int) wordStrategy.getWordList().stream().map(Word::getName).count();
+        int givenSize = (int) wordStrategy.getWordList().stream().map(Word::getName).distinct().count();
         //when
         int expectedSize = 25;
         //then
