@@ -50,8 +50,8 @@ public class WordStrategyFactory {
         List<Integer> blueIndexes = new ArrayList<>();
         List<Integer> yellowIndexes = new ArrayList<>();
 
-        List<Integer> temp = generateIndexesOfColor(integers, maxBlackNumber, blackIndexes, redIndexes, blueIndexes, yellowIndexes);
-        blackIndexes.addAll(temp);
+        List<Integer> temporaryBlackIndexes = generateIndexesOfColor(integers, maxBlackNumber, blackIndexes, redIndexes, blueIndexes, yellowIndexes);
+        blackIndexes.addAll(temporaryBlackIndexes);
         redIndexes.addAll(generateIndexesOfColor(integers, maxRedNumber, blackIndexes, redIndexes, blueIndexes, yellowIndexes));
         blueIndexes.addAll(generateIndexesOfColor(integers, maxBlueNumber, blackIndexes, redIndexes, blueIndexes, yellowIndexes));
         yellowIndexes.addAll(generateIndexesOfColor(integers, maxYellowNumber, blackIndexes, redIndexes, blueIndexes, yellowIndexes));
