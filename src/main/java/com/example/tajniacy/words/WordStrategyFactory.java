@@ -33,7 +33,7 @@ public class WordStrategyFactory {
         }
 
         int maxNumber = 25;
-        List<String> slowa = get25Words();
+        List<String> notPreparedWords = get25Words();
         List<Word> words = new ArrayList<>();
 
         int maxBlackNumber = 1;
@@ -56,15 +56,15 @@ public class WordStrategyFactory {
         blueIndexes.addAll(generateIndexesOfColor(integers, maxBlueNumber, blackIndexes, redIndexes, blueIndexes, yellowIndexes));
         yellowIndexes.addAll(generateIndexesOfColor(integers, maxYellowNumber, blackIndexes, redIndexes, blueIndexes, yellowIndexes));
 
-        for (int i = 0; i < slowa.size(); ++i) {
+        for (int i = 0; i < notPreparedWords.size(); ++i) {
             if (blackIndexes.contains(i)) {
-                words.add(new Word(slowa.get(i), ColorSelector.BLACK));
+                words.add(new Word(notPreparedWords.get(i), ColorSelector.BLACK));
             } else if (redIndexes.contains(i)) {
-                words.add(new Word(slowa.get(i), ColorSelector.RED));
+                words.add(new Word(notPreparedWords.get(i), ColorSelector.RED));
             } else if (blueIndexes.contains(i)) {
-                words.add(new Word(slowa.get(i), ColorSelector.BLUE));
+                words.add(new Word(notPreparedWords.get(i), ColorSelector.BLUE));
             } else if (yellowIndexes.contains(i)) {
-                words.add(new Word(slowa.get(i), ColorSelector.YELLOW));
+                words.add(new Word(notPreparedWords.get(i), ColorSelector.YELLOW));
             }
         }
         return words;
@@ -78,8 +78,8 @@ public class WordStrategyFactory {
         List<String> allWordFromFile = getAllWordFromFile();
 
         while (result.size() < maxNumber) {
-            int losowyIndeks = random.nextInt(allWordFromFile.size());
-            String randomString = allWordFromFile.get(losowyIndeks).toUpperCase();
+            int randomIndex = random.nextInt(allWordFromFile.size());
+            String randomString = allWordFromFile.get(randomIndex).toUpperCase();
 
             if (!result.contains(randomString)) {
                 result.add(randomString);
