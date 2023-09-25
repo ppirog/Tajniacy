@@ -11,16 +11,31 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class WordFactory {
+public class WordStrategyFactory {
 
     private static LanguageStrategy languageStrategy;
 
-    public static List<Word> get25WordsWith9RedColors8Blue1Black7yellow() {
+    public static WordStrategy getPreparedWordsToGame() {
+        Random random = new Random();
+        boolean randomSelector = random.nextBoolean();
+        if (randomSelector) {
+            return new Words9Red8BlueStrategy(get25WordsWith9RedColors8Blue1Black7yellow(9, 8));
+        } else {
+            return new Words8Red9BlueStrategy(get25WordsWith9RedColors8Blue1Black7yellow(8, 9));
+        }
+    }
+
+
+    private static List<Word> get25WordsWith9RedColors8Blue1Black7yellow(int maxRedNumber, int maxBlueNumber) {
+
+        if (maxRedNumber + maxBlueNumber != 17) {
+            throw new IllegalArgumentException("Wrong arguments. Sum of them must be equal to 17.");
+        }
+
         int maxNumber = 25;
         List<String> slowa = get25Words();
         List<Word> words = new ArrayList<>();
-        int maxRedNumber = 9;
-        int maxBlueNumber = 8;
+
         int maxBlackNumber = 1;
         int maxYellowNumber = 7;
 
@@ -101,6 +116,6 @@ public class WordFactory {
     }
 
     public static void setLanguageStrategy(LanguageStrategy languageStrategy) {
-        WordFactory.languageStrategy = languageStrategy;
+        WordStrategyFactory.languageStrategy = languageStrategy;
     }
 }

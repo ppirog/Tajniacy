@@ -108,4 +108,45 @@ public class LanguageStrategyTests {
         //then
         Assert.assertEquals(english.getInstructionLabelText(), expected);
     }
+
+    @Test
+    public void englishLanguageStrategyBlueTeamStartsMethodTest() {
+        //given
+        LanguageStrategy english = new EnglishLanguageStrategy();
+        //when
+        String expected = "BLUE STARTS";
+        //then
+        Assert.assertEquals(english.getBlueLabelWhichTeamStarts(), expected);
+    }
+
+    @Test
+    public void englishLanguageStrategyRedTeamStartsMethodTest() {
+        //given
+        LanguageStrategy english = new EnglishLanguageStrategy();
+        //when
+        String expected = "RED STARTS";
+        //then
+        Assert.assertEquals(english.getRedLabelWhichTeamStarts(), expected);
+    }
+
+
+    @Test
+    public void polishLanguageStrategyRedTeamStartsMethodTest() {
+        //given
+        LanguageStrategy english = new PolishLanguageStrategy();
+        //when
+        String expected = "CZERWONI ZACZYNAJĄ";
+        //then
+        Assert.assertEquals(english.getRedLabelWhichTeamStarts(), expected);
+    }
+
+    @Test
+    public void polishLanguageStrategyBlueTeamStartsMethodTest() {
+        //given
+        LanguageStrategy english = new PolishLanguageStrategy();
+        //when
+        String expected = "NIEBIESCY ZACZYNAJĄ";
+        //then
+        Assert.assertEquals(english.getBlueLabelWhichTeamStarts(), expected);
+    }
 }

@@ -1,5 +1,6 @@
 package com.example.tajniacy.controllers;
 
+import com.example.tajniacy.color.ColorSelector;
 import com.example.tajniacy.language.LanguageStrategy;
 import com.example.tajniacy.words.WordStorage;
 import javafx.fxml.FXML;
@@ -15,6 +16,8 @@ public class DialogController implements Initializable {
 
     private static LanguageStrategy languageStrategy;
     private final WordStorage wordStorage = WordStorage.getInstance();
+    @FXML
+    private Label whichTeamStartsTheGameLabel;
     @FXML
     private Label instructionLabel;
     @FXML
@@ -80,6 +83,14 @@ public class DialogController implements Initializable {
 
     private void setAllLabels() {
         instructionLabel.setText(languageStrategy.getInstructionLabelText());
+        if (wordStorage.getWordStrategyColorLabel().equals(ColorSelector.BLUE)) {
+            whichTeamStartsTheGameLabel.setText(languageStrategy.getBlueLabelWhichTeamStarts());
+            whichTeamStartsTheGameLabel.setTextFill(Paint.valueOf(wordStorage.getWordStrategyColorLabel().getColorCode()));
+        } else if (wordStorage.getWordStrategyColorLabel().equals(ColorSelector.RED)) {
+            whichTeamStartsTheGameLabel.setText(languageStrategy.getRedLabelWhichTeamStarts());
+            whichTeamStartsTheGameLabel.setTextFill(Paint.valueOf(wordStorage.getWordStrategyColorLabel().getColorCode()));
+        }
+
     }
 
     private void setBoard() {

@@ -5,7 +5,7 @@ import com.example.tajniacy.controllers.MainGameController;
 import com.example.tajniacy.language.EnglishLanguageStrategy;
 import com.example.tajniacy.language.LanguageStrategy;
 import com.example.tajniacy.language.PolishLanguageStrategy;
-import com.example.tajniacy.words.WordFactory;
+import com.example.tajniacy.words.WordStrategyFactory;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,7 +17,6 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class HelloApplication extends Application {
-
 
     public static void main(String[] args) {
         launch();
@@ -68,7 +67,7 @@ public class HelloApplication extends Application {
     }
 
     private void setStrategyEverywhere(LanguageStrategy strategy) {
-        WordFactory.setLanguageStrategy(strategy);
+        WordStrategyFactory.setLanguageStrategy(strategy);
         DialogController.setLanguageStrategy(strategy);
         MainGameController.setLanguageStrategy(strategy);
     }

@@ -1,10 +1,12 @@
 package com.example.tajniacy.words;
 
+import com.example.tajniacy.color.ColorSelector;
+
 import java.util.List;
 
 public class WordStorage {
     private static volatile WordStorage instance = null;
-    private List<Word> wordList;
+    private WordStrategy wordStrategy;
 
     private WordStorage() {
 
@@ -14,13 +16,18 @@ public class WordStorage {
         if (instance == null) {
             synchronized (WordStorage.class) {
                 instance = new WordStorage();
-                instance.wordList = WordFactory.get25WordsWith9RedColors8Blue1Black7yellow();
+                instance.wordStrategy = WordStrategyFactory.getPreparedWordsToGame();
             }
         }
         return instance;
     }
 
     public List<Word> getWordList() {
-        return wordList;
+        return wordStrategy.getWordList();
+    }
+
+
+    public ColorSelector getWordStrategyColorLabel() {
+        return wordStrategy.getColorSelector();
     }
 }

@@ -165,9 +165,9 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="generalInformationLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="130.0" layoutY="22.0" text="0" textFill="#b91010" GridPane.columnIndex="2">
+      <Label fx:id="generalInformationLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="130.0" layoutY="22.0" text="0" textFill="#b91010" wrapText="true" GridPane.columnIndex="2">
          <font>
-            <Font size="36.0" />
+            <Font size="34.0" />
          </font>
       </Label>
 

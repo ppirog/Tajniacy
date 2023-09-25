@@ -21,4 +21,10 @@ public class LanguageStrategyManager {
 
     static String GAME_OVER_INFO_POLISH = "KONIEC GRY";
     static String GAME_OVER_INFO_ENGLISH = "GAME OVER";
+
+    static String POLISH_LABEL_BLUE_TEAM_STARTS = "NIEBIESCY ZACZYNAJĄ";
+    static String POLISH_LABEL_RED_TEAM_STARTS = "CZERWONI ZACZYNAJĄ";
+
+    static String ENGLISH_LABEL_BLUE_TEAM_STARTS = "BLUE STARTS";
+    static String ENGLISH_LABEL_RED_TEAM_STARTS = "RED STARTS";
 }
