@@ -156,10 +156,10 @@ public class MainGameController implements Initializable {
         redLabelIdCounter.setTextFill(Color.web(ColorSelector.RED.getColorCode()));
         blueLabelId.setTextFill(Color.web(ColorSelector.BLUE.getColorCode()));
         blueLabelIdCounter.setTextFill(Color.web(ColorSelector.BLUE.getColorCode()));
-        if (wordStorage.getWordStrategyColorLabel().equals(ColorSelector.RED)) {
-            generalInformationLabelInfo(languageStrategy.getRedLabelWhichTeamStarts(), wordStorage.getWordStrategyColorLabel(), 6000);
-        } else if (wordStorage.getWordStrategyColorLabel().equals(ColorSelector.BLUE)) {
-            generalInformationLabelInfo(languageStrategy.getBlueLabelWhichTeamStarts(), wordStorage.getWordStrategyColorLabel(), 6000);
+        if (wordStorage.getColorWhichTeamStartsTheGame().equals(ColorSelector.RED)) {
+            generalInformationLabelInfo(languageStrategy.getRedLabelWhichTeamStarts(), wordStorage.getColorWhichTeamStartsTheGame(), 6000);
+        } else if (wordStorage.getColorWhichTeamStartsTheGame().equals(ColorSelector.BLUE)) {
+            generalInformationLabelInfo(languageStrategy.getBlueLabelWhichTeamStarts(), wordStorage.getColorWhichTeamStartsTheGame(), 6000);
         }
 
     }

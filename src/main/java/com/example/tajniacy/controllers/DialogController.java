@@ -83,12 +83,12 @@ public class DialogController implements Initializable {
 
     private void setAllLabels() {
         instructionLabel.setText(languageStrategy.getInstructionLabelText());
-        if (wordStorage.getWordStrategyColorLabel().equals(ColorSelector.BLUE)) {
+        if (wordStorage.getColorWhichTeamStartsTheGame().equals(ColorSelector.BLUE)) {
             whichTeamStartsTheGameLabel.setText(languageStrategy.getBlueLabelWhichTeamStarts());
-            whichTeamStartsTheGameLabel.setTextFill(Paint.valueOf(wordStorage.getWordStrategyColorLabel().getColorCode()));
-        } else if (wordStorage.getWordStrategyColorLabel().equals(ColorSelector.RED)) {
+            whichTeamStartsTheGameLabel.setTextFill(Paint.valueOf(wordStorage.getColorWhichTeamStartsTheGame().getColorCode()));
+        } else if (wordStorage.getColorWhichTeamStartsTheGame().equals(ColorSelector.RED)) {
             whichTeamStartsTheGameLabel.setText(languageStrategy.getRedLabelWhichTeamStarts());
-            whichTeamStartsTheGameLabel.setTextFill(Paint.valueOf(wordStorage.getWordStrategyColorLabel().getColorCode()));
+            whichTeamStartsTheGameLabel.setTextFill(Paint.valueOf(wordStorage.getColorWhichTeamStartsTheGame().getColorCode()));
         }
 
     }

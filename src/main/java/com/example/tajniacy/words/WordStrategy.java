@@ -6,12 +6,12 @@ import java.util.List;
 
 public abstract class WordStrategy {
 
-    protected ColorSelector colorSelector;
+    protected ColorSelector whichTeamStartsTheGame;
     protected List<Word> wordList;
 
-    public WordStrategy(List<Word> wordList, ColorSelector colorSelector) {
+    public WordStrategy(List<Word> wordList, ColorSelector whichTeamStartsTheGame) {
         this.wordList = wordList;
-        this.colorSelector = colorSelector;
+        this.whichTeamStartsTheGame = whichTeamStartsTheGame;
     }
 
 
@@ -19,7 +19,7 @@ public abstract class WordStrategy {
         return wordList;
     }
 
-    public ColorSelector getColorSelector() {
-        return colorSelector;
+    public ColorSelector getWhichTeamStartsTheGame() {
+        return whichTeamStartsTheGame;
     }
 }

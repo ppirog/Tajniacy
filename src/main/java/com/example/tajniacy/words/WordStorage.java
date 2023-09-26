@@ -27,7 +27,7 @@ public class WordStorage {
     }
 
 
-    public ColorSelector getWordStrategyColorLabel() {
-        return wordStrategy.getColorSelector();
+    public ColorSelector getColorWhichTeamStartsTheGame() {
+        return wordStrategy.getWhichTeamStartsTheGame();
     }
 }
