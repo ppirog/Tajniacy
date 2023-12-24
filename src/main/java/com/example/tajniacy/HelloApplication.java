@@ -55,6 +55,10 @@ public class HelloApplication extends Application {
         Stage dialogStage = new Stage();
         dialogStage.setScene(scene2);
         dialogStage.setTitle("T A J N I A C Y!");
+
+        dialogStage.centerOnScreen();
+        dialogStage.setAlwaysOnTop(true);
+
         dialogStage.showAndWait();
     }
 
@@ -63,6 +67,10 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
         stage.setTitle("T A J N I A C Y!");
         stage.setScene(scene);
+
+        stage.centerOnScreen();
+        stage.setAlwaysOnTop(true);
+
         stage.show();
     }
 
