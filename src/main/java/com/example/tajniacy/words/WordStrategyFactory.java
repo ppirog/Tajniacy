@@ -19,14 +19,14 @@ public class WordStrategyFactory {
         Random random = new Random();
         boolean randomSelector = random.nextBoolean();
         if (randomSelector) {
-            return new Words9Red8BlueStrategy(get25WordsWith9RedColors8Blue1Black7yellow(9, 8));
+            return new Words9Red8BlueStrategy(get25WordsWith1BlackAnd7yellowAnd9RedColors8BlueOr8RedColors9Blue(9, 8));
         } else {
-            return new Words8Red9BlueStrategy(get25WordsWith9RedColors8Blue1Black7yellow(8, 9));
+            return new Words8Red9BlueStrategy(get25WordsWith1BlackAnd7yellowAnd9RedColors8BlueOr8RedColors9Blue(8, 9));
         }
     }
 
 
-    private static List<Word> get25WordsWith9RedColors8Blue1Black7yellow(int maxRedNumber, int maxBlueNumber) {
+    private static List<Word> get25WordsWith1BlackAnd7yellowAnd9RedColors8BlueOr8RedColors9Blue(int maxRedNumber, int maxBlueNumber) {
 
         if (maxRedNumber + maxBlueNumber != 17) {
             throw new IllegalArgumentException("Wrong arguments. Sum of them must be equal to 17.");
